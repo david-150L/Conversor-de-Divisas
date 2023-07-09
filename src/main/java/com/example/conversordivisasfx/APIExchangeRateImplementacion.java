@@ -1,44 +1,42 @@
 package com.example.conversordivisasfx;
 
-import java.io.BufferedReader;
+import org.apache.http.HttpEntity;
+import org.apache.http.ParseException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
 
 public class APIExchangeRateImplementacion {
     public static String convertir(String base, String destino, String importe) {
 
-        String accessKey = "7a3736d8401e85227eae59ef";
-        String endpoint = "https://v6.exchangerate-api.com/v6/" + accessKey + "/pair/" + base + "/" + destino + "/" + importe;
+        String endpoint = "https://v6.exchangerate-api.com/v6/7a3736d8401e85227eae59ef" + "/pair/" + base + "/" + destino + "/" + importe;
 
-        try {
-            URL url = new URL(endpoint);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+            HttpGet request = new HttpGet(endpoint);
 
-            int responseCode = connection.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                String line;
-                StringBuilder response = new StringBuilder();
-
-                while ((line = reader.readLine()) != null) {
-                    response.append(line);
+            try (CloseableHttpResponse response = httpClient.execute(request)) {
+                int statusCode = response.getStatusLine().getStatusCode();
+                if (statusCode == 200) {
+                    HttpEntity entity = response.getEntity();
+                    String responseBody = EntityUtils.toString(entity);
+                    System.out.println(responseBody);
+                    return responseBody;
+                } else {
+                    System.out.println("Error en la solicitud. Código de respuesta: " + statusCode);
                 }
-
-                reader.close();
-                System.out.println(response);
-                return response.toString();
-            } else {
-                System.out.println("Error en la solicitud. Código de respuesta: " + responseCode);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
             }
-
-            connection.disconnect();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "Error en la conversion";
+
+        return "Error en la conversión";
     }
 
 }

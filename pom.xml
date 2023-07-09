@@ -14,101 +14,33 @@
     <junit.version>5.9.2</junit.version>      </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-controls</artifactId>
-      <version>19.0.2</version>
-    </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
       <version>19.0.2</version>
     </dependency>
-                                    
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
       <dependency>
           <groupId>com.smsjuice</groupId>
           <artifactId>SMSJuice-HTTP-API-Wrapper</artifactId>
           <version>1.1.1</version>
       </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP.Common</artifactId>
-          <version>2.1.2</version>
-      </dependency>
-      <dependency>
-          <groupId>com.smsjuice</groupId>
-          <artifactId>SMSJuice-HTTP-API-Wrapper</artifactId>
-          <version>1.1.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.smsjuice</groupId>
-          <artifactId>SMSJuice-HTTP-API-Wrapper</artifactId>
-          <version>1.1.1</version>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP</artifactId>
-          <version>2.1.2</version>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP</artifactId>
-          <version>2.1.2</version>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP</artifactId>
-          <version>2.1.2</version>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP</artifactId>
-          <version>2.1.2</version>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP.Common</artifactId>
-          <version>2.1.2</version>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP.Common</artifactId>
-          <version>2.1.2</version>
-          <scope>import</scope>
-      </dependency>
-      <dependency>
-          <groupId>de.fraunhofer.iosb.ilt.FROST-Server</groupId>
-          <artifactId>FROST-Server.HTTP</artifactId>
-          <version>2.1.2</version>
-          <scope>import</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.httpcomponents</groupId>
-          <artifactId>httpclient</artifactId>
-          <version>4.5.13</version>
-      </dependency>
-      <dependency>
-          <groupId>io.xiandan</groupId>
-          <artifactId>gson-ktx</artifactId>
-          <version>1.0.2</version>
-      </dependency>
-      <dependency>
-          <groupId>io.xiandan</groupId>
-          <artifactId>gson-ktx</artifactId>
-          <version>1.0.2</version>
-      </dependency>
+
       <!-- https://mvnrepository.com/artifact/org.json/json -->
       <dependency>
           <groupId>org.json</groupId>
@@ -116,6 +48,19 @@
           <version>20230618</version>
       </dependency>
 
+      <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpclient</artifactId>
+          <version>4.5.13</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+      <dependency>
+          <groupId>org.apache.httpcomponents</groupId>
+          <artifactId>httpcore</artifactId>
+          <version>4.4.14</version>
+      </dependency>
 
   </dependencies>
 
