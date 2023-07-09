@@ -6,6 +6,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import org.json.JSONObject;
 
+import java.util.Map;
+
 
 public class HelloController {
 
@@ -34,39 +36,23 @@ public class HelloController {
         JSONObject jsonObject = new JSONObject(json);
 
         // Acceder al valor de "conversion_result"
-        double conversionResult = jsonObject.getDouble("conversion_result");
+        Double conversionResult = jsonObject.getDouble("conversion_result");
 
-        //Convierte el valor conversionResult de double a String
-        String resultString = Double.toString(conversionResult);
-
-        return resultString;
+        return conversionResult.toString();
 
     }
 
-    private String obtenerSimbolo(String valor){
-        switch (valor){
-            case "Dólar" -> {
-                return "USD";
-            }
-            case "Euros" -> {
-                return "EUR";
-            }
-            case "Libras Esterlinas" -> {
-                return "GBP";
-            }
+    private String obtenerSimbolo(String valor) {
+        Map<String, String> simbolos = Map.of(
+                "Dólar", "USD",
+                "Euros", "EUR",
+                "Libras Esterlinas", "GBP",
+                "Yen Japonés", "JPY",
+                "Won sul-coreano", "KRW",
+                "Pesos colombianos", "COP"
+        );
 
-            case "Yen Japonés" -> {
-                return "JPY";
-            }
-            case "Won sul-coreano" -> {
-                return "KRW";
-            }
-            case "Pesos colombianos" -> {
-                return "COP";
-            }
-            default -> {
-                return "ERROR";
-            }
-        }
+        return simbolos.getOrDefault(valor, "ERROR");
     }
+
 }
