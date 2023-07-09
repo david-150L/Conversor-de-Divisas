@@ -2,6 +2,7 @@ package com.example.conversordivisasfx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import org.json.JSONObject;
@@ -22,6 +23,9 @@ public class HelloController {
 
     @FXML
     private TextField textFiledEquivalencia;
+
+    @FXML
+    private Button buttonConvert;
 
     @FXML
     protected void convertirValores(ActionEvent event){
