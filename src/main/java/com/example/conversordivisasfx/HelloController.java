@@ -31,7 +31,6 @@ public class HelloController {
 
     @FXML
     protected String leerJson(String json){
-
         //Crear objeto JSONObject a partir de JSON de la API
         JSONObject jsonObject = new JSONObject(json);
 
@@ -39,7 +38,6 @@ public class HelloController {
         Double conversionResult = jsonObject.getDouble("conversion_result");
 
         return conversionResult.toString();
-
     }
 
     private String obtenerSimbolo(String valor) {
@@ -51,7 +49,6 @@ public class HelloController {
                 "Won sul-coreano", "KRW",
                 "Pesos colombianos", "COP"
         );
-
         return simbolos.getOrDefault(valor, "ERROR");
     }
 

@@ -12,13 +12,19 @@ import java.io.IOException;
 
 
 public class APIExchangeRateImplementacion {
+
+    private static CloseableHttpClient httpClient;
+
+    public static void iniciarConection(){
+        httpClient = HttpClients.createDefault();
+    }
+
     public static String convertir(String base, String destino, String importe) {
 
         String endpoint = "https://v6.exchangerate-api.com/v6/7a3736d8401e85227eae59ef" + "/pair/" + base + "/" + destino + "/" + importe;
 
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+        try {
             HttpGet request = new HttpGet(endpoint);
-
             try (CloseableHttpResponse response = httpClient.execute(request)) {
                 int statusCode = response.getStatusLine().getStatusCode();
                 if (statusCode == 200) {
@@ -35,8 +41,6 @@ public class APIExchangeRateImplementacion {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return "Error en la conversión";
     }
-
 }
