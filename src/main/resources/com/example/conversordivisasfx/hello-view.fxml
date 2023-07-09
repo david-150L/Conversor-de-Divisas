@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<FlowPane fx:controller="com.example.conversordivisasfx.HelloController" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="350.0" prefWidth="535.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Conversor">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <ChoiceBox fx:id="choiceBoxIn" prefWidth="150.0" styleClass="custom-choicebox">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Dólar"/>
+                           <String fx:value="Euros" />
+                           <String fx:value="Libras Esterlinas" />
+                           <String fx:value="Yen Japonés" />
+                           <String fx:value="Won sul-coreano" />
+                           <String fx:value="Pesos colombianos" />
+                        </FXCollections>
+                     </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ChoiceBox>
+                  <ChoiceBox fx:id="choiceBoxOut" prefWidth="150.0" styleClass="custom-choicebox">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Dólar"/>
+                           <String fx:value="Euros" />
+                           <String fx:value="Libras Esterlinas" />
+                           <String fx:value="Yen Japonés" />
+                           <String fx:value="Won sul-coreano" />
+                           <String fx:value="Pesos colombianos" />
+                        </FXCollections>
+                     </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ChoiceBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <TextField prefWidth="150.0" promptText="Importe" fx:id="textFieldImporte"/>
+                  <TextField disable="true" editable="false" promptText="Equivalencia" fx:id="textFiledEquivalencia"/>
+               </children>
+            </HBox>
+            <Button fx:id="buttonConvert" mnemonicParsing="false" onAction="#convertirValores" prefHeight="26.0" prefWidth="170.0" text="Convertir">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
