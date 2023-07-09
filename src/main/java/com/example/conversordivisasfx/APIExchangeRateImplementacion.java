@@ -30,7 +30,7 @@ public class APIExchangeRateImplementacion {
                 if (statusCode == 200) {
                     HttpEntity entity = response.getEntity();
                     String responseBody = EntityUtils.toString(entity);
-                    System.out.println(responseBody);
+                    //System.out.println(responseBody);
                     return responseBody;
                 } else {
                     System.out.println("Error en la solicitud. Código de respuesta: " + statusCode);
