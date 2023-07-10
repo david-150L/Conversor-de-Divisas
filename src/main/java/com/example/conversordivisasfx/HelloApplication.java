@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Conversor de divisas");
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(false); //No se puede redimencionar la ventana
         stage.show();
     }
 
