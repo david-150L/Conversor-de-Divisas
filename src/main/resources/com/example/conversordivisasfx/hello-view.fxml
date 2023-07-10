@@ -5,14 +5,15 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<FlowPane fx:controller="com.example.conversordivisasfx.HelloController" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.conversordivisasfx.HelloController">
    <children>
-      <VBox alignment="CENTER" prefHeight="350.0" prefWidth="535.0">
+      <VBox alignment="CENTER" prefHeight="350.0" prefWidth="535.0" snapToPixel="false">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Conversor">
+            <Label alignment="CENTER" contentDisplay="RIGHT" text="Conversor">
                <font>
                   <Font name="Segoe UI Bold" size="22.0" />
                </font>
@@ -21,13 +22,20 @@
                </opaqueInsets>
                <VBox.margin>
                   <Insets bottom="20.0" />
-               </VBox.margin></Label>
+               </VBox.margin>
+               <graphic>
+                  <ImageView cache="true" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../moneda.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="20.0">
                <children>
                   <ChoiceBox fx:id="choiceBoxIn" prefWidth="150.0">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
-                           <String fx:value="Dólar"/>
+                           <String fx:value="Dólar" />
                            <String fx:value="Euros" />
                            <String fx:value="Libras Esterlinas" />
                            <String fx:value="Yen Japonés" />
@@ -41,7 +49,7 @@
                   <ChoiceBox fx:id="choiceBoxOut" prefWidth="150.0">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
-                           <String fx:value="Dólar"/>
+                           <String fx:value="Dólar" />
                            <String fx:value="Euros" />
                            <String fx:value="Libras Esterlinas" />
                            <String fx:value="Yen Japonés" />
@@ -56,8 +64,8 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="20.0">
                <children>
-                  <TextField prefWidth="150.0" promptText="Importe" fx:id="textFieldImporte"/>
-                  <TextField disable="true" editable="false" promptText="Equivalencia" fx:id="textFiledEquivalencia"/>
+                  <TextField fx:id="textFieldImporte" prefWidth="150.0" promptText="Importe" />
+                  <TextField fx:id="textFiledEquivalencia" disable="true" editable="false" promptText="Equivalencia" />
                </children>
             </HBox>
             <Button fx:id="buttonConvert" mnemonicParsing="false" onAction="#convertirValores" prefHeight="26.0" prefWidth="170.0" text="Convertir">
