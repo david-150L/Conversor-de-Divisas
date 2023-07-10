@@ -29,9 +29,16 @@ public class HelloController {
             String input = event.getCharacter();
 
             // Verificar si el carácter no es un número
-            if (!input.matches("\\d")) {
+            if (!(input.matches("\\d") || event.getCharacter().equals("\b"))) {
                 // Consumir el evento, evitando que se ingrese el carácter no válido en el TextField
                 event.consume();
+                //Focus rojo si se introduce un caracter no valido
+                String focusStyle = "-fx-focus-color: #ff1a1a;";
+                textFieldImporte.setStyle(focusStyle);
+            } else if (input.matches("\\d")) {
+                //Focus por defecto si se introduce un caracter valido
+                String defaultStyle = "-fx-control-inner-background: white;";
+                textFieldImporte.setStyle(defaultStyle);
             }
         });
     }
