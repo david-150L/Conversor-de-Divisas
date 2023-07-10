@@ -36,3 +36,7 @@ Las contribuciones son bienvenidas. Si encuentras algún problema o tienes suger
 ## Licencia
 
 Este proyecto se distribuye bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+
+# Material grafico
+
+![Captura de pantalla del programa](src/main/resources/vista.png)
