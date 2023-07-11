@@ -11,7 +11,6 @@ Este proyecto es un Conversor de Divisas desarrollado en JavaFX. Utiliza una API
 ## Requisitos del sistema
 
 - Java 19 o superior.
-- SDK de JavaFX
 
 ## Instalación y ejecución
 
@@ -41,3 +40,5 @@ Este proyecto se distribuye bajo la licencia [MIT](https://opensource.org/licens
 # Material grafico
 
 ![Captura de pantalla del programa](src/main/resources/vista.png)
+
+![Prueba de conversion](src/main/resources/prueba.gif)
