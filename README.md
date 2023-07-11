@@ -24,10 +24,10 @@ Este proyecto es un Conversor de Divisas desarrollado en JavaFX. Utiliza una API
 Este proyecto utiliza la API de ExchangeRate para obtener las tasas de cambio. Para utilizarla, necesitas obtener una clave de acceso a la API y configurarla en la clase `APIExchangeRateImplementacion`. Busca el siguiente código:
 
 ```java
-String endpoint = "https://v6.exchangerate-api.com/v6/7a3736d8401e85227eae59ef/pair/" + base + "/" + destino + "/" + importe;
+String endpoint = "https://v6.exchangerate-api.com/v6/a971433c2a9afdd0f4a3ccae/pair/" + base + "/" + destino + "/" + importe;
 ```
 
-Reemplaza `7a3736d8401e85227eae59ef` con tu clave de acceso a la API de ExchangeRate.
+Reemplaza `a971433c2a9afdd0f4a3ccae` con tu clave de acceso a la API de ExchangeRate.
 
 ## Contribuciones
 

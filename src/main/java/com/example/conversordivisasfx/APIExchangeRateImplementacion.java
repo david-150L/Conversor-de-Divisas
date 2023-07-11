@@ -35,7 +35,7 @@ public class APIExchangeRateImplementacion {
      * @return El resultado de la conversión, JSON.
      */
     public static String convertir(String base, String destino, String importe) {
-        String endpoint = "https://v6.exchangerate-api.com/v6/7a3736d8401e85227eae59ef/pair/" + base + "/" + destino + "/" + importe;
+        String endpoint = "https://v6.exchangerate-api.com/v6/a971433c2a9afdd0f4a3ccae/pair/" + base + "/" + destino + "/" + importe;
 
         try {
             HttpGet request = new HttpGet(endpoint);
