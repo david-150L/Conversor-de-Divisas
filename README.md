@@ -29,14 +29,6 @@ String endpoint = "https://v6.exchangerate-api.com/v6/a971433c2a9afdd0f4a3ccae/p
 
 Reemplaza `a971433c2a9afdd0f4a3ccae` con tu clave de acceso a la API de ExchangeRate.
 
-## Contribuciones
-
-Las contribuciones son bienvenidas. Si encuentras algún problema o tienes sugerencias de mejora, no dudes en abrir un issue o enviar una solicitud de pull.
-
-## Licencia
-
-Este proyecto se distribuye bajo la licencia [MIT](https://opensource.org/licenses/MIT).
-
 # Material grafico
 
 ![Captura de pantalla del programa](src/main/resources/vista.png)
