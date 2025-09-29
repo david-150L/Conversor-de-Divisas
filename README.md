@@ -1,6 +1,6 @@
 # Conversor de Divisas FX
 
-Este proyecto es un Conversor de Divisas desarrollado en JavaFX. Utiliza una API externa para obtener las tasas de cambio y realizar las conversiones entre diferentes monedas.
+Este proyecto es un Conversor de Divisas desarrollado en Java. Utiliza una API externa para obtener las tasas de cambio y realizar las conversiones entre diferentes monedas.
 
 ## Características
 
